@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Virtual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/dialog-polyfill/dist/dialog-polyfill.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/dialog-polyfill/dist/dialog-polyfill.css">
+
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header class="encabezado" id="encabezado">
+        <!-- Barra de búsqueda -->
+        <div class="barra-busqueda" id="barraBusqueda">
+            <!-- Botón de búsqueda que abre el campo -->
+            <button class="lupa" onclick="toggleBusqueda()" aria-label="Abrir barra de búsqueda">
+                <img src="https://i.ibb.co/rsgcvmq/tool-16205471.png" alt="Buscar" width="50" height="50">
+            </button>
+            <!-- Campo de búsqueda -->
+            <input type="text" id="buscar" placeholder="Buscar obra..." onkeyup="filtrarObras()" aria-label="Buscar por título o autor">
+        </div>
+        <!-- Título del museo -->
+        <h1 class="titulo-museo">
+            <a href="home page.html" aria-label="Inicio">
+                <i class="fas fa-home"></i>
+            </a>
+        </h1>
+        <!-- Navegación principal -->
+        <nav class="navegacion">
+            <a href="Exposiciones.html">Exposiciones</a>
+        </nav>
+    </header>    
+    <!-- Contenido principal -->
+    <main>
+        <div id="modal" class="modal">
+            <span class="modal-cerrar" onclick="cerrarModal()">&times;</span>
+            <img class="modal-contenido" id="imgExpandida" alt="Imagen expandida">
+        </div>
+        
+        <section class="galeria" aria-labelledby="galeria-titulo">  
+        <!-- Este artículo se refiere a la obra "La noche estrellada" de Vincent van Gogh -->
+        <article class="obra" data-titulo="La noche estrellada" data-autor="Vincent van Gogh">
+            <button class="obra-boton" onclick="mostrarImagen('https://media.admagazine.com/photos/618a7dbc58ac69e38abb6c2c/16:9/w_1280,c_limit/43884.jpg')" aria-label="Abrir obra La noche estrellada">
+                <img src="https://media.admagazine.com/photos/618a7dbc58ac69e38abb6c2c/16:9/w_1280,c_limit/43884.jpg" alt="Obra: La noche estrellada">
+            </button>
+            <div class="ficha-tecnica">
+                <p><strong>Título:</strong> La noche estrellada</p>
+                <p><strong>Autor:</strong> Vincent van Gogh</p>
+                <p><strong>Técnica:</strong> Pintura al óleo sobre lienzo</p>
+                <p><strong>Dimensiones:</strong> Aproximadamente 73.7 cm × 92.1 cm</p>
+                <p><strong>Año:</strong> 1889</p>
+            </div>
+            <p class="descripcion">"La noche estrellada" es una de las pinturas más reconocidas de Van Gogh, caracterizada por su cielo nocturno lleno de remolinos y estrellas brillantes sobre un pequeño pueblo. Un ciprés oscuro ocupa el primer plano, y el uso de colores vibrantes y pinceladas dinámicas le confiere un sentimiento de movimiento y emoción. Esta obra es un ejemplo destacado del estilo postimpresionista de Van Gogh.</p>
+        </article>           
+        <!-- Este artículo se refiere a la obra "La noche estrellada" de Vincent van Gogh -->
+        <article class="obra" data-titulo="La noche estrellada" data-autor="Vincent van Gogh">
+            <button class="obra-boton" onclick="mostrarImagen('https://portales.inacap.cl/Assets/artequin/img/conoce/la-noche-estrellada.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('https://portales.inacap.cl/Assets/artequin/img/conoce/la-noche-estrellada.jpg')" aria-label="Abrir obra La noche estrellada">
+                <img src="https://portales.inacap.cl/Assets/artequin/img/conoce/la-noche-estrellada.jpg" alt="Obra: La noche estrellada">
+            </button>
+            <div class="ficha-tecnica">
+                <p><strong>Título:</strong> La noche estrellada</p>
+                <p><strong>Autor:</strong> Vincent van Gogh</p>
+                <p><strong>Técnica:</strong> Pintura al óleo sobre lienzo</p>
+                <p><strong>Dimensiones:</strong> Aproximadamente 73.7 cm × 92.1 cm</p>
+                <p><strong>Año:</strong> 1889</p>
+            </div>
+            <p class="descripcion">"La noche estrellada" es una de las pinturas más reconocidas de Van Gogh, caracterizada por su cielo nocturno lleno de remolinos y estrellas brillantes sobre un pequeño pueblo. Un ciprés oscuro ocupa el primer plano, y el uso de colores vibrantes y pinceladas dinámicas le confiere un sentimiento de movimiento y emoción. Esta obra es un ejemplo destacado del estilo postimpresionista de Van Gogh.</p>
+        </article>
+
+<!-- Obra 3 -->
+<article class="obra" data-titulo="c" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('https://wallpapers.com/images/hd/4k-pictures-sfet0luuynwr4b65.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('https://wallpapers.com/images/hd/4k-pictures-sfet0luuynwr4b65.jpg')" aria-label="Abrir obra Título 3">
+        <img src="https://wallpapers.com/images/hd/4k-pictures-sfet0luuynwr4b65.jpg" alt="Obra: Título 3">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 3</p>
+        <p><strong>Autor:</strong> Autor 3</p>
+        <p><strong>Técnica:</strong> Técnica 3</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 4 -->
+<article class="obra" data-titulo="d" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-4.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-4.jpg')" aria-label="Abrir obra Título 4">
+        <img src="ruta-de-la-imagen-4.jpg" alt="Obra: Título 4">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 4</p>
+        <p><strong>Autor:</strong> Autor 4</p>
+        <p><strong>Técnica:</strong> Técnica 4</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 5 -->
+<article class="obra" data-titulo="f" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-5.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-5.jpg')" aria-label="Abrir obra Título 5">
+        <img src="ruta-de-la-imagen-5.jpg" alt="Obra: Título 5">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 5</p>
+        <p><strong>Autor:</strong> Autor 5</p>
+        <p><strong>Técnica:</strong> Técnica 5</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 6 -->
+<article class="obra" data-titulo="g" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-6.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-6.jpg')" aria-label="Abrir obra Título 6">
+        <img src="ruta-de-la-imagen-6.jpg" alt="Obra: Título 6">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 6</p>
+        <p><strong>Autor:</strong> Autor 6</p>
+        <p><strong>Técnica:</strong> Técnica 6</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+
+
+<!-- Obra 7 -->
+<article class="obra" data-titulo="h" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-7.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-7.jpg')" aria-label="Abrir obra Título 7">
+        <img src="ruta-de-la-imagen-7.jpg" alt="Obra: Título 7">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 7</p>
+        <p><strong>Autor:</strong> Autor 7</p>
+        <p><strong>Técnica:</strong> Técnica 7</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 8 -->
+<article class="obra" data-titulo="i" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-8.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-8.jpg')" aria-label="Abrir obra Título 8">
+        <img src="ruta-de-la-imagen-8.jpg" alt="Obra: Título 8">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 8</p>
+        <p><strong>Autor:</strong> Autor 8</p>
+        <p><strong>Técnica:</strong> Técnica 8</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 9 -->
+<article class="obra" data-titulo="j" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-9.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-9.jpg')" aria-label="Abrir obra Título 9">
+        <img src="ruta-de-la-imagen-9.jpg" alt="Obra: Título 9">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 9</p>
+        <p><strong>Autor:</strong> Autor 9</p>
+        <p><strong>Técnica:</strong> Técnica 9</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 10 -->
+<article class="obra" data-titulo="k" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-10.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-10.jpg')" aria-label="Abrir obra Título 10">
+        <img src="ruta-de-la-imagen-10.jpg" alt="Obra: Título 10">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 10</p>
+        <p><strong>Autor:</strong> Autor 10</p>
+        <p><strong>Técnica:</strong> Técnica 10</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 11 -->
+<article class="obra" data-titulo="l" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-11.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-11.jpg')" aria-label="Abrir obra Título 11">
+        <img src="ruta-de-la-imagen-11.jpg" alt="Obra: Título 11">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 11</p>
+        <p><strong>Autor:</strong> Autor 11</p>
+        <p><strong>Técnica:</strong> Técnica 11</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 12 -->
+<article class="obra" data-titulo="m" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-12.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-12.jpg')" aria-label="Abrir obra Título 12">
+        <img src="ruta-de-la-imagen-12.jpg" alt="Obra: Título 12">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 12</p>
+        <p><strong>Autor:</strong> Autor 12</p>
+        <p><strong>Técnica:</strong> Técnica 12</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+<!-- Obra 13 -->
+<article class="obra" data-titulo="n" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-13.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-13.jpg')" aria-label="Abrir obra Título 13">
+        <img src="ruta-de-la-imagen-13.jpg" alt="Obra: Título 13">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 13</p>
+        <p><strong>Autor:</strong> Autor 13</p>
+        <p><strong>Técnica:</strong> Técnica 13</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 14 -->
+<article class="obra" data-titulo="o" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-14.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-14.jpg')" aria-label="Abrir obra Título 14">
+        <img src="ruta-de-la-imagen-14.jpg" alt="Obra: Título 14">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 14</p>
+        <p><strong>Autor:</strong> Autor 14</p>
+        <p><strong>Técnica:</strong> Técnica 14</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 15 -->
+<article class="obra" data-titulo="p" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-15.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-15.jpg')" aria-label="Abrir obra Título 15">
+        <img src="ruta-de-la-imagen-15.jpg" alt="Obra: Título 15">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 15</p>
+        <p><strong>Autor:</strong> Autor 15</p>
+        <p><strong>Técnica:</strong> Técnica 15</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 16 -->
+<article class="obra" data-titulo="q" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-16.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-16.jpg')" aria-label="Abrir obra Título 16">
+        <img src="ruta-de-la-imagen-16.jpg" alt="Obra: Título 16">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 16</p>
+        <p><strong>Autor:</strong> Autor 16</p>
+        <p><strong>Técnica:</strong> Técnica 16</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 17 -->
+<article class="obra" data-titulo="r" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-17.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-17.jpg')" aria-label="Abrir obra Título 17">
+        <img src="ruta-de-la-imagen-17.jpg" alt="Obra: Título 17">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 17</p>
+        <p><strong>Autor:</strong> Autor 17</p>
+        <p><strong>Técnica:</strong> Técnica 17</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 18 -->
+<article class="obra" data-titulo="s" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-18.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-18.jpg')" aria-label="Abrir obra Título 18">
+        <img src="ruta-de-la-imagen-18.jpg" alt="Obra: Título 18">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 18</p>
+        <p><strong>Autor:</strong> Autor 18</p>
+        <p><strong>Técnica:</strong> Técnica 18</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 19 -->
+<article class="obra" data-titulo="t" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-19.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-19.jpg')" aria-label="Abrir obra Título 19">
+        <img src="ruta-de-la-imagen-19.jpg" alt="Obra: Título 19">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 19</p>
+        <p><strong>Autor:</strong> Autor 19</p>
+        <p><strong>Técnica:</strong> Técnica 19</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<!-- Obra 20 -->
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-20.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-20.jpg')" aria-label="Abrir obra Título 20">
+        <img src="ruta-de-la-imagen-20.jpg" alt="Obra: Título 20">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 20</p>
+        <p><strong>Autor:</strong> Autor 20</p>
+        <p><strong>Técnica:</strong> Técnica 20</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-21.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-21.jpg')" aria-label="Abrir obra Título 21">
+        <img src="ruta-de-la-imagen-21.jpg" alt="Obra: Título 21">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 21</p>
+        <p><strong>Autor:</strong> Autor 21</p>
+        <p><strong>Técnica:</strong> Técnica 21</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-22.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-22.jpg')" aria-label="Abrir obra Título 22">
+        <img src="ruta-de-la-imagen-22.jpg" alt="Obra: Título 22">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 22</p>
+        <p><strong>Autor:</strong> Autor 22</p>
+        <p><strong>Técnica:</strong> Técnica 22</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-23.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-23.jpg')" aria-label="Abrir obra Título 23">
+        <img src="ruta-de-la-imagen-23.jpg" alt="Obra: Título 23">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 23</p>
+        <p><strong>Autor:</strong> Autor 23</p>
+        <p><strong>Técnica:</strong> Técnica 23</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-24.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-24.jpg')" aria-label="Abrir obra Título 24">
+        <img src="ruta-de-la-imagen-24.jpg" alt="Obra: Título 24">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 24</p>
+        <p><strong>Autor:</strong> Autor 24</p>
+        <p><strong>Técnica:</strong> Técnica 24</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-25.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-25.jpg')" aria-label="Abrir obra Título 25">
+        <img src="ruta-de-la-imagen-25.jpg" alt="Obra: Título 25">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 25</p>
+        <p><strong>Autor:</strong> Autor 25</p>
+        <p><strong>Técnica:</strong> Técnica 25</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-26.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-26.jpg')" aria-label="Abrir obra Título 26">
+        <img src="ruta-de-la-imagen-26.jpg" alt="Obra: Título 26">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 26</p>
+        <p><strong>Autor:</strong> Autor 26</p>
+        <p><strong>Técnica:</strong> Técnica 26</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-27.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-27.jpg')" aria-label="Abrir obra Título 27">
+        <img src="ruta-de-la-imagen-27.jpg" alt="Obra: Título 27">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 27</p>
+        <p><strong>Autor:</strong> Autor 27</p>
+        <p><strong>Técnica:</strong> Técnica 27</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-28.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-28.jpg')" aria-label="Abrir obra Título 28">
+        <img src="ruta-de-la-imagen-28.jpg" alt="Obra: Título 28">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 28</p>
+        <p><strong>Autor:</strong> Autor 28</p>
+        <p><strong>Técnica:</strong> Técnica 28</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-29.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-29.jpg')" aria-label="Abrir obra Título 29">
+        <img src="ruta-de-la-imagen-29.jpg" alt="Obra: Título 29">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 29</p>
+        <p><strong>Autor:</strong> Autor 29</p>
+        <p><strong>Técnica:</strong> Técnica 29</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+
+<article class="obra" data-titulo="u" data-autor="Anuel">
+    <button class="obra-boton" onclick="mostrarImagen('ruta-de-la-imagen-30.jpg')" onkeypress="if(event.key === 'Enter') mostrarImagen('ruta-de-la-imagen-30.jpg')" aria-label="Abrir obra Título 30">
+        <img src="ruta-de-la-imagen-30.jpg" alt="Obra: Título 30">
+    </button>
+    <div class="ficha-tecnica">
+        <p><strong>Título:</strong> Título 30</p>
+        <p><strong>Autor:</strong> Autor 30</p>
+        <p><strong>Técnica:</strong> Técnica 30</p>
+        <p><strong>Dimensiones:</strong> Dimensiones de la obra</p>
+        <p><strong>Año:</strong> Año de la obra</p>
+    </div>
+    <p class="descripcion">Justificación breve de la obra.</p>
+</article>
+</section>
+</main>
+<!-- Modal para imágenes ampliadas -->
+<dialog class="modal" id="modal" aria-labelledby="imagenExpandidaTitulo">
+    <img id="imgExpandida" src="" alt="Obra ampliada">
+    <button class="boton-ocultar" onclick="cerrarModal()" aria-label="Cerrar modal">Cerrar</button>
+</dialog>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
